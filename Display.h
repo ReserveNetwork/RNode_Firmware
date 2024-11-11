@@ -543,6 +543,7 @@ void draw_disp_area() {
   } else {
     if (!disp_ext_fb or bt_ssp_pin != 0) {
       if (radio_online && display_diagnostics) {
+        disp_area.fillRect(0,4,disp_area.width(),4, SSD1306_BLACK);
         disp_area.fillRect(0,8,disp_area.width(),37, SSD1306_BLACK); disp_area.fillRect(0,37,disp_area.width(),27, SSD1306_WHITE);
         disp_area.setFont(SMALL_FONT); disp_area.setTextWrap(false); disp_area.setTextColor(SSD1306_WHITE);
 
